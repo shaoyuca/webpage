@@ -1,7 +1,12 @@
 import { notFound } from 'next/navigation'
 import { CUSTOM_PAGES } from '@/content/site'
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
+  // Static export requires at least one entry; the placeholder renders notFound()
+  // and is never linked in the nav, so it's unreachable in practice.
+  if (CUSTOM_PAGES.length === 0) return [{ slug: '__placeholder__' }]
   return CUSTOM_PAGES.map((p) => ({ slug: p.slug }))
 }
 
