@@ -8,6 +8,8 @@ import InlineLink from '@/components/ui/InlineLink'
 
 export type CourseVideo = {
   title: string
+  projectBy?: string
+  note?: string
   src: string
 }
 
@@ -68,15 +70,33 @@ export const COURSES: Course[] = [
         gaming, fashion, communication, and beyond.
       </>
     ),
-    videos: [
-      {
-        title: 'Course video template',
-        src: 'https://www.youtube-nocookie.com/embed/M7lc1UVf-VE',
-      },
-    ],
+
     // Delete studentWork if this course does not need a Student Work section.
     studentWork:
-      'Students produce working prototypes, short design reports, and final demonstrations that connect interaction concepts to everyday contexts.',
+      'Selected student projects from CDE5312 exploring interactive wearable systems and applied prototyping.',
+    videos: [
+      {
+        title: 'Gait X - Smart Shoe for Gait Analysis and Injury Prevention',
+        projectBy: 'Chen Guanjun, Lyu Jiaxun, Ma Xinkai',
+        src: 'https://www.youtube-nocookie.com/embed/sQ8WEwiwxs0',
+      },
+      {
+        title: 'Machine Learning Based Pneumatic Insole for VR',
+        projectBy: 'Kang Huzhaorui, Yu Daixun',
+        src: 'https://www.youtube-nocookie.com/embed/5popUXN-SFs',
+      },
+      {
+        title: 'Olfactory Display for Artwork Appreciation in VR',
+        projectBy: 'Gao Muzi, Gan Quanhao, Lin Tao, Ouyang Fuxi, Wei Leming',
+        src: 'https://www.youtube-nocookie.com/embed/fS7L8N_i6rc',
+      },
+      {
+        title: 'Breatho: Real-Time Respiratory Guidance System for Amateur Runners',
+        projectBy: 'Chen Xialu, Liu Huayi, Tao Yuheng, Huang Yutong, Lyu Chuang',
+        note: 'DIS 2026 student Design competition',
+        src: 'https://www.youtube-nocookie.com/embed/AOuSB8KtWEM',
+      },
+    ],
   },
   {
     title: 'CDE3301: Ideas to Proof-of-concept',
