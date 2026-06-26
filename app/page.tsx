@@ -1,12 +1,5 @@
-'use client'
+import AboutPage from './about/page'
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-
-export default function Root() {
-  const router = useRouter()
-  useEffect(() => {
-    router.replace('/about')
-  }, [router])
-  return null
+export default function RootPage() {
+  return <AboutPage />
 }
