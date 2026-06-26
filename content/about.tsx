@@ -25,7 +25,7 @@ import type { ProjectItem } from '@/components/about/ResearchSection'
  * Any file size or resolution works — the site handles resizing.
  */
 export const BIO_PHOTO = {
-  src: 'https://picsum.photos/seed/profile/280/420', // ← replace with '/images/profile.jpg'
+  src: '/images/shaoyu.jpg', // ← replace with '/images/profile.jpg'
   alt: 'Shaoyu Cai',                            // ← replace with the person's name
 }
 
@@ -38,7 +38,8 @@ export const BIO_LINKS: { label: string; href: string; external?: boolean }[] = 
   { label: 'NUS Profile',    href: 'https://cde.nus.edu.sg/edic/staff/cai-shaoyu/',  external: true },
   { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=wUpkNc8AAAAJ&hl=en',  external: true },
   { label: 'DBLP',           href: 'https://dblp.org/pid/246/5542.html',            external: true },
-  { label: 'ORCID',          href: 'https://orcid.org',           external: true },
+  { label: 'ORCID',          href: 'https://orcid.org/0000-0001-8808-3442',           external: true },
+  { label: 'Linkedin',          href: 'https://www.linkedin.com/in/shaoyu-cai-63a96523a',           external: true },
 ]
 
 /**
@@ -50,13 +51,13 @@ export const BIO_LINKS: { label: string; href: string; external?: boolean }[] = 
  */
 export const BIO_TEXT = (
   <>
-    Dr. Shaoyu Cai is currently a lecturer at the Engineering Design and Innovation Centre (EDIC), 
-    College of Design and Engineering, National University of Singapore (NUS). He also serves as Co-director in NUS Immersive Reality Lab. 
-    He received his Ph.D. degree from School of Creative Media, City University of Hong Kong (2023). 
-    His research objective is to explore how to develop “touchable” computer interfaces to enable people to have physical interaction in the virtual world. 
-    He strongly believes multimodal interaction can provide greater benefit and experience to users in extended reality (XR) environments, including virtual and augmented reality (VR & AR). 
-    Currently, his research interest mainly focuses on Human-Computer Interaction (HCI), particularly in the areas of Multimodal Interfaces, Immersive Reality, Wearables, and Haptic Perception.
-
+    Dr. Shaoyu Cai (蔡绍禹) is a Lecturer at the Engineering Design and Innovation Centre, 
+    College of Design and Engineering, National University of Singapore, where he also serves as Co-director of 
+     <InlineLink href="https://blog.nus.edu.sg/immersiverealitylab/"external> NUS Immersive Reality Lab</InlineLink>. He received his Ph.D. from the School of Creative Media at City University of Hong Kong. 
+    His research bridges engineering, computing, and design to develop intelligent interactive systems that enhance 
+    how people perceive and interact with the physical and digital worlds. His work focuses on wearable technologies, 
+    haptic interfaces, multimodal interaction, and extended reality (XR), combining human perception with innovative 
+    hardware and software design to create more natural, immersive, and effective human–computer interactions.
   </>
 )
 
@@ -89,7 +90,7 @@ export const RESEARCH_DIRECTIONS: {
     title: 'Multimodal \& Embodied Interfaces',        // ← H2 heading, edit freely
     description: (
       <>
-        I focus on the design and evaluation of multimodal human-computer interfaces that 
+        We focus on the design and evaluation of multimodal human-computer interfaces that 
         integrate multiple sensory modalities, such as touch, temperature, smell, sound, and visual feedback, 
         to enhance user perception, interaction, and experience in immersive environments.
       </>
@@ -115,8 +116,13 @@ export const RESEARCH_DIRECTIONS: {
   },
   {
     title: 'Tactile Intelligence',
-    description:
-      'My research explores how intelligent systems can leverage human perceptual abilities, such as tactile sensing, and imaginative processes, such as cross-modal generation, to create more natural human–computer interactions and next-generation embodied AI.',
+    description:(
+    <>
+    My research explores how intelligent systems can leverage human perceptual abilities, 
+      such as tactile sensing, and imaginative processes, such as cross-modal generation, 
+      to create more natural human–computer interactions and next-generation embodied AI.
+      </>
+    ),
     projects: [
       {
         title: 'CMVT',
@@ -157,7 +163,7 @@ export const OUR_APPROACH: {
 } = {
   title: 'Our Approach',                       // ← H2 heading, edit freely
   description:
-    'Our lab pursues research at the intersection of technical innovation and human-centred design, with impact spanning scientific communities, design practice, and public engagement.',
+    'We pursue research at the intersection of technical innovation and human-centred design, with impact spanning scientific communities, design practice, and public engagement.',
   items: [
     {
       title: 'Engineering & Scientific Impact', // ← H3 heading
@@ -187,7 +193,7 @@ export const OUR_APPROACH: {
       blocks: [
         {
           description:
-            'I employ project-based and studio-based learning in partnership with industry to engage students in real-world challenges, fostering innovative solutions that bridge academic knowledge and practical impact. I am currently working at the following studios in NUS:',
+            'We employ project-based and studio-based learning in partnership with industry to engage students in real-world challenges, fostering innovative solutions that bridge academic knowledge and practical impact. I am currently working at the following studios in NUS:',
           bullets: [
             <>
               <InlineLink href="https://cde.nus.edu.sg/edic/projects/wearable-tech-2026/" external>Intelligent Wearable Studio</InlineLink>, 2026-current
@@ -213,22 +219,22 @@ export const OUR_APPROACH: {
         'We work with industry, public institutions, and community organizations to translate research into real-world impact through innovation, design, and public engagement. Some representative industrial collaborators:',
       bullets: [
         <>
-          <InlineLink href="https://example.com" external>OceanX</InlineLink>
+          <InlineLink href="https://oceanx.org/into-the-ocean-exhibition/?utm_source=google&utm_medium=cpc&utm_campaign=2026_mbs_asm&utm_content=headline&gad_source=1&gad_campaignid=23875542172&gbraid=0AAAABB1pPhV_CQilaLBEcJmuTgPykrhkp&gclid=Cj0KCQjwxvjRBhC2ARIsAI7KJa1aTzCeD_BS9-FiNy4qLpVYJWDJRYEiXF3dtnWHp_ynchCkjUZ9PiQaAhVDEALw_wcB" external>OceanX</InlineLink>
         </>,
         <>
-          <InlineLink href="https://example.com" external>National Heritage Board (NHB)</InlineLink>
+          <InlineLink href="https://www.nhb.gov.sg/" external>National Heritage Board (NHB)</InlineLink>
         </>,        <>
-          <InlineLink href="https://example.com" external>Alexandra Hospital</InlineLink>
+          <InlineLink href="https://www.ah.com.sg/" external>Alexandra Hospital</InlineLink>
         </>,
       ],
     },
   ],
   // Remove the lines below (from `images:` to the closing `],`) if you don't need media logos.
-  images: [
-    { src: 'https://picsum.photos/seed/img1/400/280', alt: 'Media feature 1', href: 'https://example.com' },
-    { src: 'https://picsum.photos/seed/img2/400/280', alt: 'Media feature 2', href: 'https://example.com' },
-    { src: 'https://picsum.photos/seed/img3/400/280', alt: 'Media feature 3', href: 'https://example.com' },
-  ],
+  //images: [
+   // { src: '/images/oceanx.jpeg', alt: 'Media feature 1', href: 'https://example.com' },
+   // { src: 'https://picsum.photos/seed/img2/400/280', alt: 'Media feature 2', href: 'https://example.com' },
+  //  { src: 'https://picsum.photos/seed/img3/400/280', alt: 'Media feature 3', href: 'https://example.com' },
+  //],
 }
 
 
@@ -242,11 +248,11 @@ export const OUR_APPROACH: {
 export const CONTACT = {
   title: 'Contact',                            // ← H2 heading, edit freely
   intro:
-    'We are based in the School of Computing and Information Systems. Prospective students and collaborators are welcome to reach out by email.',
-  imageSrc: 'https://picsum.photos/seed/building/800/600', // ← replace with /images/your-building.jpg
-  imageAlt: 'School of Computing building',
+    'We are based in the Engineering Design & Innovation Centre, College of Design and Engineering. Prospective students and collaborators are welcome to reach out by email.',
+  imageSrc: '/images/e2a.png', // ← replace with /images/your-building.jpg
+  imageAlt: 'Engineering Design & Innovation Centre',
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7782!2d103.7763!3d1.2966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTcnNDcuOCJOIDEwM8KwNDYnMzQuNyJF!5e0!3m2!1sen!2ssg!4v1700000000000', // ← paste your Google Maps embed URL here
   description:
-    'School of Computing and Information Systems, 13 Computing Drive, Singapore 117417. Office hours: Monday–Friday, 9 am–5 pm. For general enquiries, please email info@example.edu.',
+    'Engineering Design & Innovation Centre, Block E2A #02-03, 5 Engineering Drive 2, Singapore 117579. Office hours: Monday–Friday, 9 am–5 pm. For general enquiries, please email shaoyucai@nus.edu.sg',
 }

@@ -10,13 +10,15 @@ export type ProjectCardProps = {
   title: string
   authors: React.ReactNode
   venue: React.ReactNode
+  keywords?: React.ReactNode
   award?: React.ReactNode
   links: ProjectLink[]
   mediaSrc: string
   mediaAlt: string
+  mediaPosition?: React.CSSProperties['objectPosition']
 }
 
-export default function ProjectCard({ title, authors, venue, award, links, mediaSrc, mediaAlt }: ProjectCardProps) {
+export default function ProjectCard({ title, authors, venue, keywords, award, links, mediaSrc, mediaAlt, mediaPosition }: ProjectCardProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-5 md:gap-8 py-8">
       {/* Media — self-start prevents grid stretch from breaking the 4:3 ratio */}
@@ -27,6 +29,7 @@ export default function ProjectCard({ title, authors, venue, award, links, media
           fill
           sizes="(max-width: 768px) calc(100vw - 80px), 240px"
           className="object-cover"
+          style={mediaPosition ? { objectPosition: mediaPosition } : undefined}
           loading="lazy"
         />
       </div>
@@ -42,6 +45,11 @@ export default function ProjectCard({ title, authors, venue, award, links, media
         <p className="text-body text-[#6B6B6B] dark:text-gray-400 break-words">
           {venue}
         </p>
+        {keywords && (
+          <p className="text-body text-[#6B6B6B] dark:text-gray-400 break-words">
+            {keywords}
+          </p>
+        )}
         <p className={`text-body text-[#6B6B6B] dark:text-gray-400 break-words ${award ? '' : 'invisible select-none'}`}>
           {award ?? ' '}
         </p>

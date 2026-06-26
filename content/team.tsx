@@ -36,10 +36,11 @@ export const TEAM_SECTIONS: TeamSectionContent[] = [
   {
     title: 'Current Research Members',
     members: [
-      'Huanhuan Liu - Research Fellow, 2026.06-present.',
+      //'Huanhuan Liu - Research Fellow, 2026.06-present.',
       'Tao Lin - Research Engineer, 2025.05-present.',
       'Tingxiao Wu - MSc Engineering Design and Innovation, 2025.08-present.',
       'Yuheng Tao - MSc Engineering Design and Innovation, 2025.08-present.',
+      'Reagan Moses Widjaja - Research intern, 2026.05-present.',
       'Matthew Chan - Research Engineer, co-advised with Prof. Khoo Eng Tat, 2026.01-present.',
     ],
   },
@@ -59,12 +60,12 @@ export const TEAM_SECTIONS: TeamSectionContent[] = [
     ],
   },
   {
-    title: 'Former Capstone Student',
+    title: 'Former Capstone Students (CDE3301/4301/UROP)',
     members: [
-      'Student Team 2024 - created a prototype for collaborative studio planning.',
-      'Student Team 2023 - explored a lightweight toolkit for classroom interaction.',
-      'Student Team 2022 - designed a sensing mockup for public exhibition settings.',
-      'Student Team 2021 - investigated physical data representations for learning activities.',
+      'I have supervised up to 50 stduents for their capstone projects or research modules.',
+      //'Student Team 2023 - explored a lightweight toolkit for classroom interaction.',
+    //'Student Team 2022 - designed a sensing mockup for public exhibition settings.',
+      //'Student Team 2021 - investigated physical data representations for learning activities.',
     ],
   },
 ]

@@ -5,15 +5,21 @@
 // ================================================================
 
 import InlineLink from '@/components/ui/InlineLink'
+import Strong from '@/components/ui/Strong'
 
 export type CourseVideo = {
   title: string
   projectBy?: string
-  note?: string
+  note?: React.ReactNode
+  mediaCoverage?: React.ReactNode
+  credit?: React.ReactNode
+  type?: 'video' | 'image'
   src: string
+  alt?: string
 }
 
 export type Course = {
+  category: 'Graduate' | 'Undergraduate'
   title: string
   href: string
   linkLabel: string
@@ -35,6 +41,7 @@ export type Course = {
  *   Delete the full { ... }, block.
  *
  * Field guide:
+ *   category    -> course level shown above the course title
  *   title       -> course name shown as a large heading
  *   href        -> external course page URL
  *   linkLabel   -> link text shown below the course title
@@ -52,6 +59,7 @@ export type Course = {
  */
 export const COURSES: Course[] = [
   {
+    category: 'Graduate',
     title: 'CDE5312: Beyond the Surface: Exploring Interactive Wearables',
     href: 'https://blog.nus.edu.sg/multimodalwearablelab/welcome/',
     linkLabel: 'Course website',
@@ -76,29 +84,29 @@ export const COURSES: Course[] = [
       'Selected student projects from CDE5312 exploring interactive wearable systems and applied prototyping.',
     videos: [
       {
-        title: 'Gait X - Smart Shoe for Gait Analysis and Injury Prevention',
-        projectBy: 'Chen Guanjun, Lyu Jiaxun, Ma Xinkai',
-        src: 'https://www.youtube-nocookie.com/embed/sQ8WEwiwxs0',
-      },
-      {
-        title: 'Machine Learning Based Pneumatic Insole for VR',
-        projectBy: 'Kang Huzhaorui, Yu Daixun',
-        src: 'https://www.youtube-nocookie.com/embed/5popUXN-SFs',
-      },
-      {
         title: 'Olfactory Display for Artwork Appreciation in VR',
         projectBy: 'Gao Muzi, Gan Quanhao, Lin Tao, Ouyang Fuxi, Wei Leming',
+        note: (
+          <>
+            <Strong>Published in Computers and Education: X Reality (CEXR)</Strong>
+          </>
+        ),
         src: 'https://www.youtube-nocookie.com/embed/fS7L8N_i6rc',
       },
       {
         title: 'Breatho: Real-Time Respiratory Guidance System for Amateur Runners',
         projectBy: 'Chen Xialu, Liu Huayi, Tao Yuheng, Huang Yutong, Lyu Chuang',
-        note: 'DIS 2026 student Design competition',
+        note: (
+          <>
+            <Strong>DIS 2026 Student Design Competition</Strong>
+          </>
+        ),
         src: 'https://www.youtube-nocookie.com/embed/AOuSB8KtWEM',
       },
     ],
   },
   {
+    category: 'Undergraduate',
     title: 'CDE3301: Ideas to Proof-of-concept',
     href: 'https://cde.nus.edu.sg/edic/projects/cde3301-projects-2026/',
     linkLabel: 'Course website',
@@ -112,32 +120,82 @@ export const COURSES: Course[] = [
         idea to address a problem of interest, generate and evaluate concept designs, and build proof-of-concept 
         prototypes for user testing. Students also learn how to work in a multidisciplinary team and with various 
         stakeholders.
+        <br />
+        <br />
+        I teach the following studios/topics in CDE3301:
+        <br />
+        • <InlineLink href="https://cde.nus.edu.sg/edic/projects/showcase/edic-project-showcase-2024/" external>Immersive Reality Studio</InlineLink>
+        <br />
+        • <InlineLink href="https://cde.nus.edu.sg/edic/projects/immersive-heritage-2025/" external>Multi-sensory VR Studio</InlineLink>
+        <br />
+        • <InlineLink href="https://cde.nus.edu.sg/edic/projects/wearable-tech-2026/" external>Intelligent Wearable Studio</InlineLink>
       </>
     ),
     studentWork:
-      'Student work includes research plans, pilot studies, annotated observations, and reflective reports on method selection.',
-  },
+      'Selected student work includes problem definition, ideation, prototyping, user evaluation, and reflective reporting. The featured project below highlights an interdisciplinary student team translating cultural heritage into an immersive proof-of-concept experience.',
+    videos: [
+      {
+        title: 'Scenting the Past: Bringing Hawker Culture to Life in VR',
+        projectBy: 'Mullappalli Devesh (Year 3, Economics), Park Junha (Year 3, Industrial and Systems Engineering), Bao Ying (Year 3, Electrical Engineering), Chen Yun Feng (Year 3, Mechanical Engineering)',
+        note: (
+          <>
+            Showcasing at <Strong>Singapore Chinese Cultural Centre (SCCC)</Strong> and demonstrating to <Strong>Mr Baey Yam Keng, Minister of State for Culture, Community and Youth of Singapore</Strong>
+          </>
+        ),
+        mediaCoverage: (
+          <>
+            Media coverage: <InlineLink href="https://cde.nus.edu.sg/news/scenting-the-past-bringing-hawker-culture-to-life-in-vr/" external>CDE New Student Achievements</InlineLink>
+            <br />
+            Featured in EDIC Project Showcase: <InlineLink href="https://cde.nus.edu.sg/edic/projects/innovating-with-immersive-reality/scenting-the-past/" external>CDE3301 project showcase</InlineLink>
+          </>
+        ),
+        type: 'image',
+        src: '/images/hawker3301.png',
+        alt: 'Scenting the Past student project showcase',
+        credit: 'Photo credit: EDIC',
+      },
+    ],
+    },
+
+
   {
-    title: 'Computational Fabrication Workshop',
-    href: 'https://example.edu/courses/computational-fabrication-workshop',
+    category: 'Undergraduate',
+    title: 'CDE4301: Innovation \& Design Capstone',
+    href: 'https://cde.nus.edu.sg/edic/idp/modules/eg4301/',
     linkLabel: 'Course website',
     // Linked description: use <InlineLink href="..." external>link text</InlineLink>.
     description: (
       <>
-        A hands-on workshop on digital fabrication, material experimentation, and rapid
-        prototyping. Students connect fabrication workflows with interface design and may
-        reference open resources such as{' '}
-        <InlineLink href="https://www.w3.org/WAI/" external>
-          accessibility guidelines
-        </InlineLink>{' '}
-        when evaluating physical interaction concepts.
+      This final year project course is the culmination of a student's learning journey in the Innovation & Design Programme. 
+      In this course, students will learn how to apply and integrate knowledge and skills acquired from preceding courses to 
+      pursue an area of innovation in a design or research project. The project may be a continuation or extension of a 
+      preceding one to deliver an integrated, improved, and optimised solution to the original problem of interest, 
+      or a fresh project that arises from a new design problem or research question. Students are expected to 
+      demonstrate a high level of independent inquiry in their project, while at the same time working effectively 
+      with their project team members and mentors.
       </>
     ),
-    // videos: [
-    //   {
-    //     title: 'Fabrication workflow sample',
-    //     src: 'https://www.youtube.com/embed/VIDEO_ID',
-    //   },
-    // ],
+    studentWork:
+      'Students independently identify and formulate a research problem, design and implement an appropriate solution or study using suitable methodologies, evaluate its effectiveness through relevant performance indicators, draw evidence-based conclusions and refine their approach based on critical analysis of results, and communicate and defend their work professionally in both written and oral forms in a timely manner.',
+        videos: [
+      {
+        title: 'ThermoFace: Thermo-vibratory on-face haptic display for enhanced VR immersion',
+        projectBy: 'Wang Bo (Year 4 Electrical Engineering), Mingyuan Jing (Year 3 Electrical Engineering), Xinyu Li (Year 4 Electrical Engineering), Yuxuan Li (Year 4 Electrical Engineering), Yalin Peng (Year 4 Electrical Engineering)',
+        note: (
+          <>
+            Showcasing the project to <Strong>NUS President Professor Tan Eng Chye</Strong> and <Strong>CDE Dean Prof Teo Kie Leong</Strong> at EDIC project showcase event
+          </>
+        ),
+        mediaCoverage: (
+          <>
+            Featured in EDIC Project Showcase: <InlineLink href="https://cde.nus.edu.sg/news/edic-project-showcase-2025/?fbclid=IwZXh0bgNhZW0CMTEAAR5nlWFgJF4xegxUzIpS8EA-qnkbSeO8H4yHDBYpyWHUMbJEllxIa4yShBCeBg_aem_svrymn65jdYHyf5twKHeyw" external>CDE4301 project showcase</InlineLink>
+          </>
+        ),
+        type: 'image',
+        src: '/images/thermoface.jpg',
+        alt: 'thermoface',
+        credit: 'Photo credit: EDIC',
+      },
+    ],
   },
 ]
