@@ -25,7 +25,7 @@ import type { ProjectItem } from '@/components/about/ResearchSection'
  * Any file size or resolution works — the site handles resizing.
  */
 export const BIO_PHOTO = {
-  src: '/images/shaoyu.jpg', // ← replace with '/images/profile.jpg'
+  src: '/images/shaoyu.JPG', // ← replace with '/images/profile.jpg'
   alt: 'Shaoyu Cai',                            // ← replace with the person's name
 }
 
